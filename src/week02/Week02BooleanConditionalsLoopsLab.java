@@ -96,7 +96,22 @@ public class Week02BooleanConditionalsLoopsLab {
 		//				i. "SILVER" is 0.10
 		//				ii. "GOLD" is 0.15
 		//				iii. "PLATINUM" is 0.25
-		
+		String loyaltyMemberStatus = "SILVER";
+		double loyaltyMemberDiscount = 0.0;
+		switch (loyaltyMemberStatus.toUpperCase()) {
+			case("SILVER"):
+				loyaltyMemberDiscount = 0.10;
+				break;
+			case("GOLD"):
+				loyaltyMemberDiscount = 0.15;
+				break;
+			case("PLATINUM"):
+				loyaltyMemberDiscount = 0.25;
+				break;
+			default:
+				break;
+		}
+		System.out.println(loyaltyMemberDiscount);
 
 		
 		// 8. Using the Loyalty Member Program variables from Question 7, do the following:
@@ -105,15 +120,29 @@ public class Week02BooleanConditionalsLoopsLab {
 		//				the loyaltyMemberDiscount percent of the billTotal
 		//		c. If the adjustedBillTotal is greater than $500 upgrade the 
 		//				loyaltyMemberStatus from SILVER to GOLD or from GOLD to PLATINUM
+		double billTotal = 550.00;
+		double adjustedTotal = billTotal - (loyaltyMemberDiscount * billTotal);
+			if (adjustedTotal > 500) {
+				if (loyaltyMemberStatus == "SILVER") {
+					loyaltyMemberStatus = "GOLD";
+				}else if (loyaltyMemberStatus == "GOLD") {
+					loyaltyMemberStatus = "PLATINUM";
+				}
+			}
 
-
-		
+		System.out.println(loyaltyMemberStatus);
 		// 9. Login -- username & password:
 		//		a. Create two variables, username and password
 		//		b. Create a conditional that prints one of the following:
 		//				i. "login successful" if the username is "Tommy123" and the password is "12345"
 		//				ii. "access denied" otherwise
-
+		String username = "Tommy123";
+		String password = "12345";
+			if (username == "Tommy123" && password == "12345") {
+				System.out.println("login successful");
+			} else {
+				System.out.println("access denied");
+			}
 		
 		
 		//
@@ -121,25 +150,41 @@ public class Week02BooleanConditionalsLoopsLab {
 		//
 		
 		// 10. Write a for loop that prints each number from 0 to 9
-
+			for(int i = 0; i<10; i++) {
+				System.out.println(i);
+			}
 		
 		
 		// 11. Write a for loop that prints each number from 10 to 0 backwards
-
+			for(int i = 10; i>=0 ; i--) {
+				System.out.println(i);
+			}
 		
 		
 		// 12. Write a for loop that prints every other number from 0 to 100
-
+			for(int i = 0; i <= 100; i+=2) {
+				System.out.println(i);
+			}
 		
 		
 		// 13. Write a for loop that iterates from 0 to 100 and prints 
 		//			"EVEN" if the number is even and "ODD" if it's odd
-
+			for(int i = 0; i <= 100; i++) {
+				if (i % 2 == 0) {
+					System.out.println("EVEN");
+				} else {
+					System.out.println("ODD");
+				}
+			} 
 		
 		
 		// 14. Write a while loop that starts at 100 and iterates backwards by 1 until it reaches 0
 		//			within the loop, divide each number by 3 and print the remainder to the console.
-
+			int i = 100;
+			while (i >=0) {
+				System.out.println(i%3);
+				i--;
+			}
 		
 
 		
