@@ -7,8 +7,10 @@
 package Week04;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Week04StringBuilderListSetMapLab {
@@ -38,7 +40,7 @@ public class Week04StringBuilderListSetMapLab {
 		myListString.add("I am hear");
 		myListString.add("Where should I go?");
 		myListString.add("Hi, how are you?");
-		myListString.add("What?");
+		myListString.add("what?");
 		System.out.println(myListString);
 		
 		// 3. Write and test a method that takes a list of strings 
@@ -112,36 +114,70 @@ public class Week04StringBuilderListSetMapLab {
 		// 12. Write and test a method that takes a set of integers 
 		//			and returns a new set of integers containing only even numbers 
 		//			from the original set
-
+		System.out.print("Question#12: ");
+		Set<Integer> oldSetIntegers = new HashSet<>();
+		for (int i = 0; i < 30; i++) {
+			oldSetIntegers.add(i);
+		};
+		System.out.println(newSetIntegers(oldSetIntegers));
 
 		
 		// 13. Create a map of string and string and add 3 items to it where the key of each
 		// 			is a word and the value is the definition of the word
-
+		System.out.print("Question#13: ");
+		Map<String, String> dictionaryMap = new HashMap<>();
+		dictionaryMap.put("String", "The String class represents character strings. All string literals in Java programs, such as \"abc\" , are implemented as instances of this class.");
+		dictionaryMap.put("Integer", "The Integer class wraps a value of the primitive type int in an object. An object of type Integer contains a single field whose type is int .");
+		dictionaryMap.put("null", " In Java, null is a literal used to denote the absence of an object. It is strictly typed, meaning it can only be assigned to reference types.");
+		System.out.println(dictionaryMap);
 	
 		
 		// 14. Write and test a method that takes a Map<String, String> and a string 
 		// 			and returns the value for a key in the map that matches the
 		// 			string parameter (i.e. like a language dictionary lookup)
-
+		System.out.print("Question#14: ");
+		System.out.println(findValueMap(dictionaryMap, "String"));
 		
 		// 15. Write and test a method that takes a List<String> 
 		//			and returns a Map<Character, Integer> containing a count of 
 		//			all the strings that start with a given character
-		
+		System.out.print("Question#15: ");
+		System.out.println(characterMap(myListString));
 
 	}
 
 	// Method 15:
-	
+	public static Map<Character,Integer> characterMap(List<String>myListString){
+		Map<Character,Integer> result = new HashMap<>();
+		for(String item : myListString) {
+			if(result.get(item.toLowerCase().charAt(0)) != null) {
+				result.put(item.toLowerCase().charAt(0),result.get(item.toLowerCase().charAt(0))+1);
+			} else {
+				result.put(item.toLowerCase().charAt(0),1);
+			};
+		};
+		return result;
+	};
 	
 	
 	// Method 14:
-	
+	public static String findValueMap(Map<String,String>dictionaryMap, String x) {
+		String result="";
+		result = dictionaryMap.get(x);
+		return result;
+	};
 
 	
 	// Method 12:
-	
+	public static Set<Integer>  newSetIntegers(Set<Integer>oldSetIntegers){
+		Set<Integer> result = new HashSet<>();
+		for(int item : oldSetIntegers) {
+			if(item%2 == 0) {
+				result.add(item);
+			};
+		};
+		return result;
+	};
 
 	
 	// Method 11:
