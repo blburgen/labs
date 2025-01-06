@@ -63,7 +63,7 @@ public class Week01VariablesAndOperationsLab {
 		System.out.println(fullName + " lives at " + streetAddress);
 		
 		System.out.println(availableSeats);
-		System.out.println(costGroceries);
+		System.out.println(String.format("%.2f",costGroceries));
 		System.out.println(middleInitial);
 		System.out.println(hotOutside);
 		System.out.println(firstName);
