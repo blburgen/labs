@@ -1,0 +1,4 @@
+INFO: Tue Jan 07 19:35:09 MST 2025 - Hello
+WARNING: Tue Jan 07 19:35:10 MST 2025 - This is a warning
+ERROR: Tue Jan 07 19:35:10 MST 2025 - Oops, this is an error!
+FATAL: Tue Jan 07 19:35:10 MST 2025 - FATAL ERROR

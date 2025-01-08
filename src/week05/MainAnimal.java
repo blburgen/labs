@@ -1,6 +1,6 @@
 package week05;
 
-public class AnimalMain {
+public class MainAnimal {
 	public static void main(String[] args) {
 		
 		   // Use the Constructor to set the information upon 

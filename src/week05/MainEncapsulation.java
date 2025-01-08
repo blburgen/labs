@@ -1,6 +1,6 @@
 package week05;
 
-public class Encapsulation {
+public class MainEncapsulation {
 
 	public static void main(String[] args) {
 		Student student = new Student();
