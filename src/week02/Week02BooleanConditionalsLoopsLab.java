@@ -86,7 +86,7 @@ public class Week02BooleanConditionalsLoopsLab {
 			} else {
 				System.out.println("Jackpot!");
 			}
-		
+	
 				
 		// 7.  Loyalty Member Program:
 		//		a. Create a variable called loyaltyMemberStatus and assign the value "SILVER"
@@ -99,13 +99,13 @@ public class Week02BooleanConditionalsLoopsLab {
 		String loyaltyMemberStatus = "SILVER";
 		double loyaltyMemberDiscount = 0.0;
 		switch (loyaltyMemberStatus.toUpperCase()) {
-			case("SILVER"):
+			case "SILVER":
 				loyaltyMemberDiscount = 0.10;
 				break;
-			case("GOLD"):
+			case "GOLD":
 				loyaltyMemberDiscount = 0.15;
 				break;
-			case("PLATINUM"):
+			case "PLATINUM":
 				loyaltyMemberDiscount = 0.25;
 				break;
 			default:
