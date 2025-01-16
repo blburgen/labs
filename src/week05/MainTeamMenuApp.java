@@ -25,6 +25,7 @@ public class MainTeamMenuApp {
 		while (decision != 5) {
 			printOptions();
 			decision = scan.nextInt();
+			scan.nextLine();
 			if(decision == 1) {
 				teams.add(createNewTeam());
 			} else if (decision == 2) {
@@ -53,7 +54,6 @@ public class MainTeamMenuApp {
 	private static Team createNewTeam() {
 		System.out.print("Enter name of the team you want to create: ");
 		String name = scan.nextLine();
-		name = scan.nextLine();
 		return new Team(name); 
 	}
 	
@@ -61,7 +61,6 @@ public class MainTeamMenuApp {
 		printTeamNames();
 		System.out.print("Enter the name of the team you wish to add a player to: ");
 		String teamName = scan.nextLine();
-		teamName = scan.nextLine();
 		try {
 			Team foundTeam = findTeamByName(teamName);
 			foundTeam.addPlayer(createNewPlayer());
@@ -100,7 +99,6 @@ public class MainTeamMenuApp {
 		printTeamNames();
 		System.out.print("Enter the name of the team you wish to remove a player from: ");
 		String teamName = scan.nextLine();
-		teamName = scan.nextLine();
 		try {
 			Team foundTeam = findTeamByName(teamName);
 			foundTeam.describe();
@@ -117,7 +115,6 @@ public class MainTeamMenuApp {
 		printTeamNames();
 		System.out.print("Which team would you like to see the info for? ");
 		String teamName = scan.nextLine();
-		teamName = scan.nextLine();
 		try {
 			Team foundTeam = findTeamByName(teamName);
 			foundTeam.describe();
